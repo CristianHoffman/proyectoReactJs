@@ -1,0 +1,25 @@
+
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo-img {
+    height: 100px;
+    margin-right: 20px;
+}
+.logo-nombre{
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+    padding: 30px;
+}
