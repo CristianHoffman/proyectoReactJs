@@ -1,13 +1,19 @@
 import React from "react";
-import Header from "./components/Header/Header"
+import Navbar from "./components/Header/Header"
+import ItemListContainer from "./components/Header/Conteiner/ItemListConteiner";
 
 const nombre = 'cristian'
+const apellido = 'Hoffman'
 
 const App = () => {
   return (
-    <Header nombre={nombre} />
-  )
-}
+    <>
+    <Navbar nombre={nombre} apellido={apellido}/>
+    
+    <ItemListContainer greeting= "Aca iran los productos :)"/>
+    </>
+    )
+  }
 
 export default App
  

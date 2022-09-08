@@ -1,32 +1,29 @@
 import logo from "../../img/logo.jpg"
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import "./Estilo.css"
+import CartWidget from "./Cart/CartWidget";
 
 
-const Header = () => {
-    return (
-        // <header>
-        //    <img src={logo} class="logo" alt="logo"/>
-        //    <h1>Napoles</h1>
-        //    <nav>
-        //      <a href="">Home</a>
-        //      <a href="">Productos</a>
-        //    </nav>
-        //    <ShoppingCartIcon color="secondary"/>
-          
-        // </header>
 
+const Navbar = ({nombre, apellido}) => {
+    const links = [
+        {id: 1, nombre: "Home"},
+        {id: 2, nombre: "Nosotros"},
+        {id: 3, nombre: "Productos"}
+    ]
+  return (
         <header>
           <div class="logo">
            <img src={logo} class="logo-img" alt="logo"/>
-           <h1 class= "logo-nombre">Napoles</h1>
+           <h1 class= "logo-nombre">Napoles {apellido}</h1>
           </div>
           <nav>
-           <a href="">Home</a>
-           <a href="">Productos</a>
+          {links.map ((link)=>{
+            return  <a key={link.id} href="">{link.nombre}</a>
+            
+          })}
           </nav>
-         <ShoppingCartIcon color="secondary"/>
+         <CartWidget/>
         </header>
     )
 }
-export default Header
+export default Navbar
