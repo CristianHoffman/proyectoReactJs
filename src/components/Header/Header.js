@@ -12,13 +12,13 @@ const Navbar = ({nombre, apellido}) => {
     ]
   return (
         <header>
-          <div class="logo">
-           <img src={logo} class="logo-img" alt="logo"/>
-           <h1 class= "logo-nombre">Napoles {apellido}</h1>
+          <div className="logo">
+           <img src={logo} className="logo-img" alt="logo"/>
+           <h1 className= "logo-nombre">Napoles {apellido}</h1>
           </div>
           <nav>
           {links.map ((link)=>{
-            return  <a key={link.id} href="">{link.nombre}</a>
+            return  <a className="text-white" key={link.id} href="">{link.nombre}</a>
             
           })}
           </nav>
