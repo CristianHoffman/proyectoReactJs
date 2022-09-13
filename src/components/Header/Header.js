@@ -1,6 +1,6 @@
-import logo from "../../img/logo.jpg"
+import logo from "../../assets/img/logo.jpg"
 import "./Estilo.css"
-import CartWidget from "./Cart/CartWidget";
+import CartWidget from "../Cart/CartWidget";
 
 
 
@@ -14,7 +14,7 @@ const Navbar = ({nombre, apellido}) => {
         <header>
           <div className="logo">
            <img src={logo} className="logo-img" alt="logo"/>
-           <h1 className= "logo-nombre">Napoles {apellido}</h1>
+           <h1 className= "logo-nombre">Napoles</h1>
           </div>
           <nav>
           {links.map ((link)=>{
