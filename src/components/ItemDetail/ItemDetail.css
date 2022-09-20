@@ -1,5 +1,5 @@
-.productos {
-    max-width: 20%;
+.producto {
+    max-width: 30%;
     padding: 10px;
     margin-bottom: 20px;
     box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
@@ -7,8 +7,8 @@
     margin: 100px;
 
 }
-.productos img {
-    width: 100%;
+.producto img {
+    width: 60%;
     
 }
 

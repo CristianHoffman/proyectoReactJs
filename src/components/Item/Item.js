@@ -1,6 +1,8 @@
 import "../Item/Item"
 import "../Item/Item.css"
 
+
+
 const Item = ({product}) =>{
     console.log(product)
     return (
@@ -10,6 +12,7 @@ const Item = ({product}) =>{
         <p className="fw-bold">$ {product.price}</p>
         <img src={product.image}/>
         <button className="boton">Ver mas</button>
+        
         </div>
     )
 }
