@@ -1,18 +1,26 @@
 import React, {useState, useEffect} from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
+import { customFetch } from "../CustomFetch/CustomFetch";
+import { Productos } from "../../assets/Productos";
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState({}) 
+    const [detalleProducto, setDetalleProducto] = useState({});
+    const {productId} = useParams();
     useEffect(() =>{
-    fetch('https://fakestoreapi.com/products/3')
-    .then(res=>res.json())
-    .then(json => setProduct(json))
-    }, [])
-   
+        const getData = new Promise(res =>{
+            setTimeout(() =>{
+                res(Productos);
+            },200);
+        });
+        getData.then(res => setDetalleProducto(res.find(prod => prod.id === parseInt(productId) )))
+     }, [])
+
+ 
    
     return (
     <>
-    <ItemDetail item={product}/>
+    <ItemDetail item={detalleProducto}/>
     </>
 )
 }

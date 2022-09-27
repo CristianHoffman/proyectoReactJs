@@ -3,6 +3,7 @@ import "./ItemCount.css"
 
 
 
+
 const ItemCount = ({inicio, stock, onAdd}) =>{
     
     const [carrito, setCarrito] = useState(inicio);
