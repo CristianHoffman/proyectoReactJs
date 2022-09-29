@@ -55,5 +55,19 @@ export const Productos = [
     categoria: "Zapatillas", 
     image: "https://images.stockx.com/images/Air-Jordan-1-Low-Laser-Orange-W-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1608516019"
 },
+   {id:9, 
+    product: "Adidas Yeezy",                                                                  
+    description:"Slide Onyx", 
+    price: 114000, 
+    categoria: "Slides", 
+    image: "https://d2r9epyceweg5n.cloudfront.net/stores/001/203/791/products/adidas-yeezy-slide-onyx1-c9a434395831cf3ac016595558158829-1024-1024.jpg"
+},
+   {id:10, 
+    product: "Drew",                                                                  
+    description:"house mascot slippers white", 
+    price: 33000, 
+    categoria: "Slides", 
+    image: "http://cdn.shopify.com/s/files/1/1447/4614/products/drew-house-mascot-slippers-white-originalfook-1_grande.jpg?v=1628689475"
+},
 ]
 
