@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartView } from "./components/CartView/CartView";
-
+import CartProvieder from "./components/Context/CartContext";
 
 const greeting = "Bienvenidos a nuestra tienda"
 
@@ -13,6 +13,7 @@ const App = () => {
   return (
     <>
     <BrowserRouter>
+    <CartProvieder>
      <Navbar/>
       <Routes>
         <Route path="/" element={<ItemListContainer greeting={greeting}/>}/>
@@ -22,6 +23,7 @@ const App = () => {
        
        
       </Routes>
+    </CartProvieder>
     </BrowserRouter>
 
     </>
