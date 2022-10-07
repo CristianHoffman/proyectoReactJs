@@ -19,8 +19,8 @@ return (
     <div className="contador">
     
     <h2>{carrito}</h2>
-    <button type="button" class="btn btn-dark m-1" disabled={carrito >= stock} onClick={agregarCarrito}>+</button>
-    <button type="button" class="btn btn-dark m-1" disabled={carrito <= inicio} onClick={quitarCarrito}>-</button>
+    <button type="button" className="btn btn-dark m-1" disabled={carrito >= stock} onClick={agregarCarrito}>+</button>
+    <button type="button" className="btn btn-dark m-1" disabled={carrito <= inicio} onClick={quitarCarrito}>-</button>
        <div>
         <button type="button" className="btn btn-success" onClick={() =>onAdd(carrito)}>Agregar al carrito</button>
        </div>

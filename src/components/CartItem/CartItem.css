@@ -1,0 +1,19 @@
+.cartItem {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    max-width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    margin: 1rem auto;
+}
+
+.cartItem img {
+    width: 100px;
+    margin-right: 1rem;
+}
+.pp {
+    position: relative;
+    top: -20px;
+    padding: 50px;
+}
