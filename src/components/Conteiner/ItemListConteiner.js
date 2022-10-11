@@ -3,6 +3,8 @@ import ItemList from "../ItemList/ItemList";
 import { Productos } from "../../assets/Productos";
 import { useParams } from "react-router-dom";
 import { BounceLoader } from "react-spinners";
+import { db } from "../firebase/firebase";
+import { collection, getDocs, query, where} from "firebase/firestore";
 
 
 const ItemListContainer = ({greeting}) =>{
@@ -11,17 +13,20 @@ const ItemListContainer = ({greeting}) =>{
     const [cargando, setCargando] = useState({})
     
     useEffect(() =>{
-    const promesaItem = new Promise(res =>{
-        setTimeout(() =>{
-            res(Productos);
-            setCargando(false)
-        },2000);
-    });
+        const queryCollection = collection(db, 'products')
+       
+    
     if(categoriaId) {
-        promesaItem.then(res => setListProducts(res.filter(prod => prod.categoria === categoriaId)))
-        
+        const queryFilter = query(queryCollection, where("categoria", "==", categoriaId))
+        getDocs(queryFilter)
+        .then(res => setListProducts(res.docs.map(product => ({id: product.id, ...product.data() }))))
+    
+       
+        setCargando(false)
     } else {
-        promesaItem.then(res =>setListProducts(res))
+        getDocs(queryCollection)
+        .then(res => setListProducts(res.docs.map(product => ({id: product.id, ...product.data() }))))
+       
         
     }
  }, [categoriaId])
