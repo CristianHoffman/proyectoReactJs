@@ -7,8 +7,10 @@ const {productoTotal} = useCartContext()
 
     return (
         <div>
-        <span className='text-light'>{productoTotal() || ''}</span>
+        
         <ShoppingCartIcon color="secondary"/>
+        <span>{productoTotal() || ''}</span>
+
         </div>
         
     )
