@@ -17,7 +17,7 @@ Esta eCommerce cuenta con 3 categorias que se podra navegar por ellas. Si el cli
 
 ### Links:
 
-[Links](https://napolessneaker.000webhostapp.com/)
+[Proyecto]  (https://napolessneaker.000webhostapp.com/)
 
 ### Visualizacion:
 ![GIF](https://user-images.githubusercontent.com/103120376/198309012-5519974b-5e6a-4de1-ba1c-043344414f50.gif)
